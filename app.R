@@ -16,8 +16,6 @@ options(gargle_oauth_cache = ".secrets")
 drive_auth(cache = ".secrets", email = "sbick95@gmail.com")
 gs4_auth(token = drive_token())
 
-# gs4_auth(email = "sbick95@gmail.com", use_oob = TRUE, token = "4/1AX4XfWj7ei0lh_Fu3VO7g5Kr9X5Du3wvW5OlGL-uDGYcY8VORFthixz1dQs")
-
 subs_volume <- function(submissions, by = "day") {
   submissions %>%
     mutate(by_day = lubridate::floor_date(survey_time, by)) %>%
